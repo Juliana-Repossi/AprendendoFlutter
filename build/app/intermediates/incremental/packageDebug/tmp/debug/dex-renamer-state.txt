@@ -1,4 +1,4 @@
-#Fri Mar 24 20:34:55 BRT 2023
-base.0=/home/juliana/Transferências/Juliana/LabES/favo_inovacao/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Mon Apr 03 10:30:45 BRT 2023
+base.0=/home/juliana/Transferências/Juliana/LabES/AprendendoFlutter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

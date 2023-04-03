@@ -28,15 +28,26 @@ class HomePageState extends State<HomePage> {
           //preencher todo espaço
           width: double.infinity,
           height: double.infinity,
+          //listView é para scrolar
           child: Column(
+            //alinhamento de listview
+            //scrollDirection: Axis.vertical,
             //alinhamento na coluna
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
             //filhos -  vai colocar widgets enfileirados
             children: [
               Text('Contador: $counter'),
               // ignore: prefer_const_constructors
-              CustomSwitch(),
+              Container(height: 20),
+              const CustomSwitch(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  const CustomSwitch(),
+                  const CustomSwitch(),
+                ],
+              )
             ],
           ),
         ),

@@ -1,6 +1,8 @@
+import 'package:favo_inovacao/home_page.dart';
+import 'package:favo_inovacao/login_page.dart';
 import 'package:flutter/material.dart';
 import 'app_controller.dart';
-import 'home_page.dart';
+//import 'home_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -19,7 +21,11 @@ class AppWidget extends StatelessWidget {
                 ? Brightness.dark
                 : Brightness.light,
           ),
-          home: const HomePage(),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => const LoginPage(),
+            '/home': (context) => const HomePage(),
+          },
         );
       },
     );
