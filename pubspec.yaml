@@ -60,7 +60,10 @@ flutter:
   uses-material-design: true
 
   assets:
-    - Imagens/Logo_roxa.png
+  - assets/imagens/Logo_roxa.png
+  - assets/imagens/Logo_Branca.png
+  - assets/imagens/Fundo.jpg
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
