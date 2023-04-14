@@ -1,4 +1,0 @@
-#Tue Apr 04 21:33:10 BRT 2023
-base.0=/home/juliana/Transferências/Juliana/LabES/AprendendoFlutter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
