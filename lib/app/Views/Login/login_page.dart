@@ -1,4 +1,6 @@
+import 'package:favo_inovacao/app/shared/themes/themes.dart';
 import 'package:flutter/material.dart';
+
 import '../../shared/widgets/input_box.widget.dart';
 import '../../Controllers/Login/login_controller.dart';
 
@@ -27,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
             )),
         //opacidade do fundo
         Container(
-          color: const Color.fromRGBO(94, 72, 151, 0.4),
+          color: lightTheme.colorScheme.primary.withOpacity(0.1),
         ),
         _formularioLoginCadastro(context),
       ],
@@ -49,33 +51,28 @@ class _LoginPageState extends State<LoginPage> {
                   width: 300,
                   height: 230,
                   child: Image.asset('assets/imagens/Logo_Branca.png')),
-              Column(
-                children: [
-                  email(),
-                  senha(),
-                ],
+              //email
+              const BoxLogin(
+                title: "email",
+                keyboardType: TextInputType.emailAddress,
               ),
-              const SizedBox(height: 3),
-              Column(
-                children: [
-                  botaoEntrar(),
-                  const SizedBox(height: 25),
-                  botaoCadastrar(),
-                ],
-              )
+              //senha
+              const BoxLogin(
+                title: "senha",
+                keyboardType: TextInputType.visiblePassword,
+                ehSenha: true,
+              ),
+              const SizedBox(
+                height: 4.5,
+              ),
+              botaoEntrar(),
+              const SizedBox(height: 25),
+              botaoCadastrar(context)
             ],
           ),
         ),
       ),
     );
-  }
-
-  email() {
-    return const BoxLogin();
-  }
-
-  senha() {
-    return const BoxLogin();
   }
 
   botaoEntrar() {
@@ -94,7 +91,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  botaoCadastrar() {
+  botaoCadastrar(context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color.fromRGBO(255, 177, 43, 1),

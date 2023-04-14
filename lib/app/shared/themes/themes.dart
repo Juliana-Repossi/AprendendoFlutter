@@ -12,6 +12,16 @@ ThemeData get lightTheme => ThemeData(
           elevation: 30,
         ),
       ),
+      inputDecorationTheme: const InputDecorationTheme(
+        labelStyle:
+            TextStyle(color: Color.fromRGBO(94, 72, 151, 1), fontSize: 18),
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(94, 72, 151, 0.4)),
+        ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(255, 177, 43, 1)),
+        ),
+      ),
     );
 
 ThemeData get darkTheme => ThemeData(
