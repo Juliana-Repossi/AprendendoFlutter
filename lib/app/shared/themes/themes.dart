@@ -12,17 +12,27 @@ ThemeData get lightTheme => ThemeData(
         elevation: 30,
       ),
     ),
+    textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+      foregroundColor: Colors.white,
+    )),
     inputDecorationTheme: const InputDecorationTheme(
-      labelStyle:
-          TextStyle(color: Color.fromRGBO(94, 72, 151, 1), fontSize: 18),
-      enabledBorder: UnderlineInputBorder(
-        borderSide: BorderSide(color: Color.fromRGBO(94, 72, 151, 0.4)),
+      labelStyle: TextStyle(
+        color: Color.fromRGBO(255, 255, 255, 0.9),
+        fontSize: 20,
       ),
+      enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: Color.fromRGBO(255, 255, 255, 1))),
       focusedBorder: UnderlineInputBorder(
         borderSide: BorderSide(color: Color.fromRGBO(255, 177, 43, 1)),
       ),
     ),
-    textTheme: const TextTheme(button: TextStyle(fontSize: 20)));
+    textTheme: const TextTheme(
+      //texto digitado
+      titleMedium: TextStyle(fontSize: 20, color: Colors.white),
+      //texto do elevated Button
+      labelLarge: TextStyle(fontSize: 20, color: Colors.white),
+    ));
 
 ThemeData get darkTheme => ThemeData(
       useMaterial3: true,

@@ -1,9 +1,7 @@
-import 'package:favo_inovacao/app/shared/themes/themes.dart';
 import 'package:flutter/material.dart';
 
 import '../../shared/widgets/input_box.widget.dart';
 import '../../shared/widgets/button.widget.dart';
-import '../../Controllers/Login/login_controller.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -13,8 +11,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final controladorLogin = Login();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,11 +27,11 @@ class _LoginPageState extends State<LoginPage> {
             )),
         //opacidade do fundo
         Container(
-          color: lightTheme.colorScheme.primary.withOpacity(0.1),
+          color: const Color.fromARGB(127, 27, 0, 37),
         ),
         SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.all(25.0),
             child: _formularioLoginCadastro(),
           ),
         ),
@@ -53,27 +49,38 @@ class _LoginPageState extends State<LoginPage> {
             child: Image.asset('assets/imagens/Logo_Branca.png')),
         //email
         const BoxLogin(
-          title: "email",
-          keyboardType: TextInputType.emailAddress,
-        ),
+            title: "email", keyboardType: TextInputType.emailAddress),
         //senha
         const BoxLogin(
-          title: "senha",
-          keyboardType: TextInputType.visiblePassword,
-          ehSenha: true,
+            title: "senha",
+            keyboardType: TextInputType.visiblePassword,
+            ehSenha: true),
+        Container(
+          alignment: Alignment.centerRight,
+          child: TextButton(
+            child: const Text(
+              "Esqueci minha senha",
+              style: TextStyle(fontSize: 16),
+            ),
+            onPressed: () {},
+          ),
         ),
-        const SizedBox(
-          height: 4.5,
-        ),
+        const SizedBox(height: 15),
         const Button(text: "Entrar"),
-        const SizedBox(height: 25),
+        const SizedBox(height: 10),
+        Container(
+          alignment: Alignment.center,
+          child: TextButton(
+            child: const Text(
+              "Cadastre-se !",
+              style: TextStyle(
+                fontSize: 16,
+              ),
+            ),
+            onPressed: () {},
+          ),
+        ),
       ],
     );
-  }
-
-  fazerLogin() {
-    setState(() {
-      controladorLogin.login();
-    });
   }
 }
